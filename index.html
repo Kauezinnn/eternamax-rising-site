@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos - Eternamax Rising</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones do FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-robot"></i>
+            <h1>Eternamax Rising</h1>
+        </div>
+        <p>Veja os comandos do bot oficial do Eternamax Rising e explore todas as funcionalidades disponíveis.</p>
+    </header>
+
+    <!-- Áreas de Controles (Filtros e Busca) -->
+    <section class="controls-section">
+        <!-- Barra de Pesquisa -->
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Pesquisar comando..." onkeyup="filtrarComandos()">
+        </div>
+
+        <!-- Botões de Categorias -->
+        <div class="category-buttons">
+            <button class="cat-btn active" onclick="selecionarCategoria('todas', this)">
+                <i class="fa-solid fa-border-all"></i> Todas
+            </button>
+            <button class="cat-btn" onclick="selecionarCategoria('utilidades', this)">
+                <i class="fa-solid fa-wrench"></i> Utilidades
+            </button>
+            <button class="cat-btn" onclick="selecionarCategoria('diversao', this)">
+                <i class="fa-solid fa-gamepad"></i> Diversão
+            </button>
+            <button class="cat-btn" onclick="selecionarCategoria('moderacao', this)">
+                <i class="fa-solid fa-shield-halved"></i> Moderação
+            </button>
+            <button class="cat-btn" onclick="selecionarCategoria('economia', this)">
+                <i class="fa-solid fa-coins"></i> Economia
+            </button>
+            <button class="cat-btn" onclick="selecionarCategoria('minecraft', this)">
+                <i class="fa-solid fa-cube"></i> Minecraft
+            </button>
+            <button class="cat-btn" onclick="selecionarCategoria('social', this)">
+                <i class="fa-solid fa-users"></i> Social
+            </button>
+            <button class="cat-btn" onclick="selecionarCategoria('imoveis', this)">
+                <i class="fa-solid fa-house"></i> Imóveis
+            </button>
+        </div>
+    </section>
+
+    <!-- Lista de Comandos -->
+    <main class="container">
+        <h2>Comandos Disponíveis</h2>
+        
+        <div class="command-grid" id="commandList">
+            
+            <!-- Utilidades -->
+            <div class="command-card" data-category="utilidades">
+                <div class="command-header">
+                    <span class="cmd-name">e!ping</span>
+                    <span class="cmd-category utilidades">Utilidades</span>
+                </div>
+                <p class="cmd-desc">Mostra a latência atual do bot e da API do Discord.</p>
+            </div>
+
+            <div class="command-card" data-category="utilidades">
+                <div class="command-header">
+                    <span class="cmd-name">e!membros</span>
+                    <span class="cmd-category utilidades">Utilidades</span>
+                </div>
+                <p class="cmd-desc">Mostra os membros no servidor e suas estatísticas.</p>
+            </div>
+
+            <!-- Diversão -->
+            
+
+            <!-- Moderação -->
+            
+
+            <!-- Economia -->
+            <div class="command-card" data-category="economia">
+                <div class="command-header">
+                    <span class="cmd-name">e!saldo</span>
+                    <span class="cmd-category economia">Economia</span>
+                </div>
+                <p class="cmd-desc">Verifica o seu saldo de eternacoins no discord e no minecraft.</p>
+            </div>
+
+            <div class="command-card" data-category="economia">
+                <div class="command-header">
+                    <span class="cmd-name">e!daily</span>
+                    <span class="cmd-category economia">Economia</span>
+                </div>
+                <p class="cmd-desc">Resgata sua recompensa diária de moedas.</p>
+            </div>
+
+            <div class="command-card" data-category="economia">
+                <div class="command-header">
+                    <span class="cmd-name">e!trabalhar</span>
+                    <span class="cmd-category economia">Economia</span>
+                </div>
+                <p class="cmd-desc">Trabalha para ganhar moedas.</p>
+            </div>
+
+            <div class="command-card" data-category="economia">
+                <div class="command-header">
+                    <span class="cmd-name">e!pescar</span>
+                    <span class="cmd-category economia">Economia</span>
+                </div>
+                <p class="cmd-desc">Pescar para ganhar moedas.</p>
+            </div>
+
+            <div class="command-card" data-category="economia">
+                <div class="command-header">
+                    <span class="cmd-name">e!minerar</span>
+                    <span class="cmd-category economia">Economia</span>
+                </div>
+                <p class="cmd-desc">Minera para ganhar moedas.</p>
+            </div>
+
+            <div class="command-card" data-category="economia">
+                <div class="command-header">
+                    <span class="cmd-name">e!venderpeixes</span>
+                    <span class="cmd-category economia">Economia</span>
+                </div>
+                <p class="cmd-desc">Vende os peixes que você pescou para ganhar moedas.</p>
+            </div>
+
+            <div class="command-card" data-category="economia">
+                <div class="command-header">
+                    <span class="cmd-name">e!venderminerios</span>
+                    <span class="cmd-category economia">Economia</span>
+                </div>
+                <p class="cmd-desc">Vende os minérios que você minerou para ganhar moedas.</p>
+            </div>
+
+            <div class="command-card" data-category="economia">
+                <div class="command-header">
+                    <span class="cmd-name">e!inventario</span>
+                    <span class="cmd-category economia">Economia</span>
+                </div>
+                <p class="cmd-desc">Exibe o seu inventário com todos os itens que você possui.</p>
+            </div>
+
+            <div class="command-card" data-category="economia">
+                <div class="command-header">
+                    <span class="cmd-name">e!transferir</span>
+                    <span class="cmd-category economia">Economia</span>
+                </div>
+                <p class="cmd-desc">Transfere moedas para outros usuários.</p>
+            </div>
+
+            <div class="command-card" data-category="economia">
+                <div class="command-header">
+                    <span class="cmd-name">e!rankdiscord</span>
+                    <span class="cmd-category economia">Economia</span>
+                </div>
+                <p class="cmd-desc">Veja o ranking do servidor no sistema econômico.</p>
+            </div>
+
+            <div class="command-card" data-category="economia">
+                <div class="command-header">
+                    <span class="cmd-name">e!mines</span>
+                    <span class="cmd-category economia">Economia</span>
+                </div>
+                <p class="cmd-desc">Aposte no jogo das minas.</p>
+            </div>
+
+            <div class="command-card" data-category="economia">
+                <div class="command-header">
+                    <span class="cmd-name">e!blackjack</span>
+                    <span class="cmd-category economia">Economia</span>
+                </div>
+                <p class="cmd-desc">Jogue blackjack e tente ganhar moedas.</p>
+            </div>
+
+            <!-- Minecraft -->
+            <div class="command-card" data-category="minecraft">
+                <div class="command-header">
+                    <span class="cmd-name">e!vincular</span>
+                    <span class="cmd-category minecraft">Minecraft</span>
+                </div>
+                <p class="cmd-desc">Vincule sua conta do Minecraft ao discord.</p>
+            </div>
+
+            <div class="command-card" data-category="minecraft">
+                <div class="command-header">
+                    <span class="cmd-name">e!enviar</span>
+                    <span class="cmd-category minecraft">Minecraft</span>
+                </div>
+                <p class="cmd-desc">Envia eternacoins do discord para o Minecraft.</p>
+            </div>
+
+            <div class="command-card" data-category="minecraft">
+                <div class="command-header">
+                    <span class="cmd-name">e!rankmine</span>
+                    <span class="cmd-category minecraft">Minecraft</span>
+                </div>
+                <p class="cmd-desc">Veja o ranking do servidor de Minecraft.</p>
+            </div>
+
+            <!-- Social -->
+            <div class="command-card" data-category="social">
+                <div class="command-header">
+                    <span class="cmd-name">e!perfil</span>
+                    <span class="cmd-category social">Social</span>
+                </div>
+                <p class="cmd-desc">Exibe o seu cartão de perfil personalizado com saldo e bio.</p>
+            </div>
+
+            <div class="command-card" data-category="social">
+                <div class="command-header">
+                    <span class="cmd-name">e!sobremim</span>
+                    <span class="cmd-category social">Social</span>
+                </div>
+                <p class="cmd-desc">Altere sua bio no perfil.</p>
+            </div>
+
+            <!-- Imóveis -->
+            <div class="command-card" data-category="imoveis">
+                <div class="command-header">
+                    <span class="cmd-name">e!imoveis</span>
+                    <span class="cmd-category imoveis">Imóveis</span>
+                </div>
+                <p class="cmd-desc">Acompanhe seus imóveis e gerencie suas propriedades.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Eternamax Rising. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

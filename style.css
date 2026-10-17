@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121019;
+    color: #e2e0ea;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #1a1625;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 1px solid #2d2640;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #a855f7;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #9ca3af;
+}
+
+/* Áreas de Busca e Botões */
+.controls-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 24px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 12px 16px 12px 42px;
+    background-color: #1a1625;
+    border: 1px solid #3b3054;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s;
+}
+
+#searchInput:focus {
+    border-color: #a855f7;
+    box-shadow: 0 0 8px rgba(168, 85, 247, 0.3);
+}
+
+/* Botões de Categorias */
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.cat-btn {
+    background-color: #1a1625;
+    color: #9ca3af;
+    border: 1px solid #2d2640;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.cat-btn:hover {
+    background-color: #2d2640;
+    color: #ffffff;
+    border-color: #7e22ce;
+}
+
+/* Estado Ativo do Botão de Categoria */
+.cat-btn.active {
+    background-color: #a855f7;
+    color: #ffffff;
+    border-color: #a855f7;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px 20px;
+    flex: 1;
+    width: 100%;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    color: #f3e8ff;
+}
+
+.command-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.command-card {
+    background-color: #1a1625;
+    border-radius: 8px;
+    padding: 18px;
+    border: 1px solid #2d2640;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.command-card:hover {
+    transform: translateY(-3px);
+    border-color: #7e22ce;
+}
+
+.command-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cmd-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #0d0b13;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #2d2640;
+}
+
+.cmd-category {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Estilos de Cor por Categoria */
+.cmd-category.utilidades { background-color: #3b0764; color: #e9d5ff; }
+.cmd-category.diversao { background-color: #581c87; color: #f3e8ff; }
+.cmd-category.moderacao { background-color: #6b21a8; color: #fae8ff; }
+.cmd-category.economia { background-color: #4c1d95; color: #ddd6fe; }
+.cmd-category.minecraft { background-color: #311042; color: #c084fc; border: 1px solid #7e22ce; }
+.cmd-category.social { background-color: #5b21b6; color: #ede9fe; }
+.cmd-category.imoveis { background-color: #4a044e; color: #f5d0fe; }
+
+.cmd-desc {
+    color: #9ca3af;
+    font-size: 0.95rem;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1625;
+    color: #9ca3af;
+    border-top: 1px solid #2d2640;
+    font-size: 0.9rem;
+}
